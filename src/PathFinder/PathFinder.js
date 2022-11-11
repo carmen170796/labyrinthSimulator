@@ -15,7 +15,6 @@ class PathFinder extends React.Component {
             endCol: 2,
             addWalls:false,
             size:window.innerWidth,
-            reset:"off" 
         }
     }
 
@@ -33,7 +32,7 @@ setSizeOfBoard(){
 setMatrix(){
     const newMatrix =[]
     const columnAmount = this.setSizeOfBoard()
-    const rowSize = 17 
+    const rowSize = 17
     for(let col = 0; col < columnAmount; col++){
         const currentRow = []
         for(let row = 0; row < rowSize; row++){
@@ -97,7 +96,9 @@ updateProperty(col,row,matrix,propertyToChange){
     newMatrix[col][row]=newNode
     return newMatrix
 }
+
 animationDijkstra(){
+this.setState({addWalls:false})
 const {matrix,startCol,startRow,endCol,endRow} = this.state
 let animations = dijkstra(matrix, matrix[startCol][startRow],matrix[endCol][endRow])
 const shortestPath= this.shortestPath()
@@ -166,14 +167,23 @@ handleMouseUp(){
 
 }
 
+componentDidUpdate(){
+
+}
 resetEverything(){
     const boxesArray=document.getElementsByClassName('box')
     for (let i= 0; i<boxesArray.length;i++){
         boxesArray[i].classList.remove('isVisited',"shortestPath")
-    }
+    } 
+    console.log(this.state)
     const newMatrix=this.setMatrix()
-    this.setState({matrix:newMatrix})
+    this.setState({
+        matrix: newMatrix,
+        addWalls:false,
+    })
 }
+
+
 
 render() {
         const matrix = this.state.matrix

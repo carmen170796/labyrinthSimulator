@@ -1,14 +1,20 @@
-.banner-div{
-    background-color: #1c2d43;
+.pathFinder{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.banner-div{  
+    background-color:#2f4a6a ;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
-    align-items: baseline;
+    align-items: center;
 }
 
 .banner-text{
     color: #EBF2FA;
     margin: 0;
+    padding: 0;
     font-size: 1.5rem;
 }
 .matrix-container{
@@ -26,12 +32,11 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center ;
 }
 
 button {
     all:unset;
-    margin: 0 3rem;
     padding: 0.5rem;
     cursor: pointer;
     font-weight: bolder;
