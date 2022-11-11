@@ -98,7 +98,6 @@ updateProperty(col,row,matrix,propertyToChange){
 }
 
 animationDijkstra(){
-this.setState({addWalls:false})
 const {matrix,startCol,startRow,endCol,endRow} = this.state
 let animations = dijkstra(matrix, matrix[startCol][startRow],matrix[endCol][endRow])
 const shortestPath= this.shortestPath()
@@ -107,7 +106,7 @@ console.log(shortestPath)
 for (let i=0; i < animations.length; i++){
     if (i === animations.length-1){
         setTimeout(()=>{
-        for (let j=0; j < shortestPath.length; j++){
+            for (let j=0; j < shortestPath.length; j++){
             const row = shortestPath[j].row
             const col = shortestPath[j].col
             const currentBox = document.getElementById(`${col}-${row}`)
@@ -117,13 +116,13 @@ for (let i=0; i < animations.length; i++){
             }
         }
         , i*20)}
+    
     const row = animations[i].row
     const col = animations[i].col
     const currentBox = document.getElementById(`${col}-${row}`)
     setTimeout(()=>{
         currentBox.classList.add("isVisited")
-    },i*15)
-
+        },i*15)
 
     }
 
@@ -167,23 +166,17 @@ handleMouseUp(){
 
 }
 
-componentDidUpdate(){
-
-}
 resetEverything(){
     const boxesArray=document.getElementsByClassName('box')
     for (let i= 0; i<boxesArray.length;i++){
         boxesArray[i].classList.remove('isVisited',"shortestPath")
     } 
-    console.log(this.state)
     const newMatrix=this.setMatrix()
     this.setState({
         matrix: newMatrix,
         addWalls:false,
     })
 }
-
-
 
 render() {
         const matrix = this.state.matrix
