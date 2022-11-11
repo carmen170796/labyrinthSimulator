@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/labyrinthSimulator/static/css/main.789e61ad.css",
+    "main.js": "/labyrinthSimulator/static/js/main.a8e1b529.js",
+    "static/js/787.ab4fce9e.chunk.js": "/labyrinthSimulator/static/js/787.ab4fce9e.chunk.js",
+    "index.html": "/labyrinthSimulator/index.html",
+    "main.789e61ad.css.map": "/labyrinthSimulator/static/css/main.789e61ad.css.map",
+    "main.a8e1b529.js.map": "/labyrinthSimulator/static/js/main.a8e1b529.js.map",
+    "787.ab4fce9e.chunk.js.map": "/labyrinthSimulator/static/js/787.ab4fce9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.789e61ad.css",
+    "static/js/main.a8e1b529.js"
+  ]
+}
