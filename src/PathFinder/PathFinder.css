@@ -1,0 +1,47 @@
+.banner-div{
+    background-color: #1c2d43;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: baseline;
+}
+
+.banner-text{
+    color: #EBF2FA;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.matrix-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 
+    
+    /*grid-template-columns: repeat( auto-fit, minmax(1rem, 3rem) );
+    justify-content: center;
+    */
+}
+
+.buttons-container{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    all:unset;
+    margin: 0 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 10px;
+    color: #EBF2FA;
+  
+}
+
+.visualize{
+    background-color: #4eac85;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
